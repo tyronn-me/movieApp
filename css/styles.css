@@ -23,6 +23,7 @@ input[type=number]:focus,
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
+  background: none;
 }
 
 body {
@@ -63,23 +64,16 @@ p {
 }
 
 .form-inline .form-control {
-	background: none!important;
-	border: rgba(255,255,255,0.5) 2px solid;
-	border-right: none;
-	border-left: none;
-	border-top: none;
+	background: rgba(0,0,0,0.5);
+	border: rgba(0,0,0,0.1) 1px solid;
 	width: 300px;
-	outline: none!important;
-	border-radius: 0px;
-	-webkit-border-radius: 0px;
-	-moz-border-radius: 0px;
-	-o-border-radius: 0px;
-	padding: 10px 0px;
+	padding: 10px;
 	appearance: none!important;
 	-webkit-appearance: none!important;
 	-moz-appearance: none!important;
 	-o-appearance: none!important;
 	color: #ffffff;
+	font-size: 0.8em;
 }
 
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -143,16 +137,22 @@ p {
 #movieInfo {
 	position: absolute;
 	left: 30px;
-	bottom: 30px;
+	bottom: 220px;
 	z-index: 2;
-	width: 700px;
+	width: 50%;
+	background: rgba(0,0,0,0.5);
+	padding: 30px;
+	border-radius: 5px!important;
+	-webkit-border-radius: 5px!important;
+	-moz-border-radius: 5px!important;
+	-o-border-radius: 5px!important;
 }
 
 #movieInfo h2 {
 	color: #ffffff;
-	font-size: 2.5em;
+	font-size: 2em;
 	line-height: 1.4em;
-	margin: 0 0 0 0;
+	margin: 0;
 	padding: 0;
 	font-weight: 900;
 }
@@ -160,7 +160,7 @@ p {
 #movieInfo h3 {
 	color: rgba(255,255,255,0.5);
 	font-size: 0.8em;
-	margin: 0;
+	margin: 0 0 15px 0;
 	padding: 0;
 }
 
@@ -179,6 +179,9 @@ p {
 }
 
 .starList {
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
 	display: block;
 	clear: both;
 	margin: 10px 0 10px 0;
@@ -187,9 +190,8 @@ p {
 
 .starList li {
 	list-style: none;
-	padding: 3px 0 0 0;
-	margin: 0 5px;
-	float: left;
+	padding: 5px 0;
+	margin: 0;
 	color: #f1d010;
 	font-size: 0.7em;
 }
@@ -201,6 +203,43 @@ p {
 	display: block;
 	float: none;
 	clear: both;
+}
+
+#panelsWrap {
+	position: absolute;
+	left: 30px;
+	bottom: 30px;
+	right: 20px;
+	z-index: 2;
+}
+
+#panelsWrap h3 {
+	font-size: 1em;
+	color: #ffffff;
+	margin: 20px 0;
+	display: block;
+	clear: both;
+}
+
+.moviePanels {
+	width: 19%;
+	height: 120px;
+	margin: 0 1% 0 0;
+	float: left;
+	background-size: cover!important;
+	-webkit-background-size: cover!important;
+	-moz-background-size: cover!important;
+	-o-background-size: cover!important;
+	border-radius: 5px!important;
+	-webkit-border-radius: 5px!important;
+	-moz-border-radius: 5px!important;
+	-o-border-radius: 5px!important;
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+.moviePanels:hover, .moviePanels.active {
+	opacity: 1;
 }
 
 /*
@@ -225,6 +264,13 @@ p {
 	-moz-transform: scale(1);
 	-o-transform: scale(1);
 	opacity: 1;
+}
+
+.addTransition {
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+	-moz-transition: all 0.5s ease-in-out;
+	-o-transition: all 0.5s ease-in-out;
 }
 
 .animateIn {

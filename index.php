@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Pixel Labs - Movie showtimes and more!</title>
+    <title>Pixel Labs (beta) - Movie showtimes and more!</title>
   <meta name="author" content="Tyron">
   <meta name="description" content="Movie showtimes, reviews and more all in one place!">
   <meta name="keywords" content="movies, reviews, showtimes, movie, film, cinema">
